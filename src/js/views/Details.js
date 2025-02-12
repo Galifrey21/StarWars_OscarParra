@@ -7,15 +7,6 @@ import imagen from "../../img/jude.jpeg"
 const apiUrl = "https://www.swapi.tech/api"
 
 
-useEffect(() => {
-    fetch(apiUrl + "/planets/")
-        .then(response => response.json()) // Convertir respuesta a JSON
-        .then(data => {
-            console.log("Datos recibidos:", data); // 🔹 Ver qué devuelve la API
-            setData(data.results); // 🔹 Guardar solo los planetas (results)
-        })
-        .catch(error => console.error("Error al obtener datos:", error));
-}, []); // 🔹 Se ejecuta solo una vez al montar el componente
 
 
 
