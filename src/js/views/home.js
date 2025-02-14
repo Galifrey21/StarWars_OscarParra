@@ -74,7 +74,7 @@ export const Home = () => {
         localStorage.setItem('favorites', JSON.stringify(copy_favorites));
         window.dispatchEvent(new Event('storage'));
     };
-    
+
 
     return (
         <div className="container">
@@ -83,7 +83,7 @@ export const Home = () => {
             <div className="scroll-container">
                 {people.map((person) => (
                     <div className="card" key={person.uid}>
-                        <img src={`https://starwars-visualguide.com/assets/img/characters/${person._uid}.jpg`} className="card-img-top" alt={person.name} />
+                        <img src={`https://starwars-visualguide.com/assets/img/characters/${person._uid}.jpg`} style={{ width: "400px", height: "200px" }} className="card-img-top border-bottom" alt={person.name} />
                         <div className="card-body text-center">
                             <p className="fs-3">{person.name}</p>
                             <p className="card-text"><strong>Género: </strong>{person.properties.gender}</p>
@@ -102,11 +102,11 @@ export const Home = () => {
             </div>
 
             {/* Sección de Planetas */}
-            <h1 className="text-danger mb-4 fs-4">Planetas</h1>
+            <h1 className="text-danger mt-4 mb-4 fs-4">Planetas</h1>
             <div className="scroll-container">
                 {planets.map((planet) => (
                     <div className="card" key={planet.uid}>
-                        <img src={`https://starwars-visualguide.com/assets/img/characters/${planet.uid}.jpg`} className="card-img-top" alt={planet.name} />
+                        <img src={`https://starwars-visualguide.com/assets/img/characters/${planet.uid}.jpg`} style={{ width: "400px", height: "200px" }} className="card-img-top border-bottom" alt={planet.name} />
                         <div className="card-body">
                             <p className="fs-3">{planet.name}</p>
                             <p className="card-text"><strong>Diámetro: </strong>{planet.properties.diameter}</p>
@@ -125,11 +125,12 @@ export const Home = () => {
             </div>
 
             {/* Sección de Vehículos */}
-            <h1 className="text-danger mb-4 fs-4">Vehículos</h1>
+            <h1 className="text-danger mt-4 mb-4 fs-4">Vehículos</h1>
             <div className="scroll-container">
                 {vehicles.map((vehicle) => (
                     <div className="card" key={vehicle.uid}>
-                        <img src={`https://starwars-visualguide.com/assets/img/characters/${vehicle.uid}.jpg`} className="card-img-top" alt={vehicle.name} />
+                        <img src={`https://starwars-visualguide.com/assets/img/characters/${vehicle.uid}.jpg`} style={{ width: "400px", height: "200px" }} className="card-img-top border-bottom" alt={vehicle.name}/>
+
                         <div className="card-body">
                             <p className="fs-4">{vehicle.name}</p>
                             <p className="card-text"><strong>Modelo: </strong>{vehicle.properties.model}</p>

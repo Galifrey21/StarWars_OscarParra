@@ -34,6 +34,7 @@ export const Navbar = () => {
     return (
         <div className="container">
             <nav className="navbar navbar-light bg-light mb-3 d-flex justify-content-between align-items-center">
+                <div className="bg-black">
                 <Link to="/">
                     <img
                         src="https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png?region=0,0,586,254"
@@ -41,7 +42,7 @@ export const Navbar = () => {
                         style={{ maxWidth: "100px" }}
                     />
                 </Link>
-
+                </div>
                 {/* Botón Favoritos */}
                 <div className="dropdown">
                     <button
